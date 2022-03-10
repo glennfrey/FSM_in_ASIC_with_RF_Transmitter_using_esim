@@ -64,30 +64,40 @@ rain sensor, light sensor, and moisture sensor. Each of which has its own interf
 ![](hackathonpics/8bitDecoder_tb.png)
 ![](hackathonpics/8bitDecoder_ngspice_waveform.png)
 
-## Carry_Lookahead_bit3_Block
-![](analog/CLA_3_schematic.png)
-![](analog/CLA_3_tb.png)
-![](analog/CLA_3_waveform.png)
+## UART_Block
+![](hackathonpics/UART_makerchip.png)
+![](hackathonpics/UART_waveform1.png)
+![](hackathonpics/UART_waveform2.png)
+![](hackathonpics/UART_waveform3.png)
 
-## Carry_Lookahead_bit4_Block
-![](analog/CLA_4_schematic.png)
-![](analog/CLA_4_tb.png)
-![](analog/CLA_4_waveform.png)
-![](analog/CLA_4_waveform1.png)
-![](analog/CLA_4_waveform2.png)
-![](analog/CLA_4_waveform3.png)
+## PISO_Block
+![](hackathonpics/PISO_makerchip.png)
 
-## Carry_Lookahead_Adder_4bit
-![](analog/CLA_final_schematic.png)
-![](analog/CLA_final_tb.png)
-![](analog/CLA_final_waveform.png)
+## TIMER_Block
+![](hackathonpics/TIMER_makerchip.png)
+![](hackathonpics/TIMER_waveform.png)
+![](hackathonpics/TIMER_waveform2.png)
+
+## UpDownCOUNTER_Block
+![](hackathonpics/updownCounter_makerchip.png)
+![](hackathonpics/updownCounter_waveform.png)
+
+## ASIC_Digital_Block
+![](hackathonpics/ASIC_makerchip_fsm_decoder.png)
+![](hackathonpics/ASIC_makerchip_fsm_decoder2.png)
+![](hackathonpics/ASIC_makerchip_fsm_decoder_ram_timer.png)
+![](hackathonpics/ASIC_waveform_fsm_decoder_ram_timer.png)
+![](hackathonpics/ASIC_waveform_fsm_decoder_ram_timer2.png)
+![](hackathonpics/ASIC_maker_fsm_decoder_ram_timer_uart.png)
+![](hackathonpics/ASIC_waveform_fsm_decoder_ram_timer_uart.png)
+![](hackathonpics/ASIC_waveform2_fsm_decoder_ram_timer_uart.png)
+![](hackathonpics/ASIC_waveform3_fsm_decoder_ram_timer_uart.png)
+![](hackathonpics/ASIC_schematic.png)
+![](hackathonpics/ASIC_finalschem.png)
+
 
 ## Output Waveform
-![](analog/CLA_final_waveform1.png)
-![](analog/CLA_final_waveform2.png)
-![](analog/CLA_final_waveform3.png)
-![](analog/CLA_final_waveform4.png)
-
+![](hackathonpics/ASIC_ngspice.png)
 
 ## Netlist
 ```
@@ -346,13 +356,11 @@ Glenn Frey Olamit , self.
 1. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
 2. Chinmay panda, IIT Hyderabad
 3. Sameer Durgoji, NIT Karnataka
-4. [Synopsys Team/Company](https://www.synopsys.com/)
-5. https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/
+4. [esim Team/Company](https://hackathon.fossee.in/esim/home)
+5. https://hackathon.fossee.in/esim/home
 ## References
-I. S. Dhanjal. 4 bit carry look ahead adder transistor level
-implementation using static cmos logic.
-https://youtu.be/WItAXzrfPrE
-
-M. Hasan. High-performance design of a 4-bit carry look-ahead adder
-in static cmos logic.
-http://section.iaesonline.com/index.php/IJEEI/article/view/2582
+Generation of ASK signal using multisim software | Amplitude shift
+keying | Acts of Facts..
+https://www.youtube.com/watch?v=TrqzPw1Ad5s
+ How to write FSM in Verilog?
+https://www.asic-world.com/tidbits/verilog_fsm.html

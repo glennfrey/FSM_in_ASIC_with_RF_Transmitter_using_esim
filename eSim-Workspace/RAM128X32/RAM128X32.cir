@@ -1,0 +1,81 @@
+* C:\Users\glenn\eSim-Workspace\RAM128X32\RAM128X32.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 3/9/2022 1:57:43 AM
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+U13  Net-_U13-Pad1_ Net-_U13-Pad2_ Net-_U13-Pad3_ Net-_U13-Pad4_ Net-_U13-Pad5_ Net-_U13-Pad6_ Net-_U13-Pad7_ Net-_U13-Pad8_ Net-_U13-Pad9_ Net-_U13-Pad10_ Net-_U13-Pad11_ Net-_U13-Pad12_ Net-_U13-Pad13_ Net-_U13-Pad14_ Net-_U13-Pad15_ Net-_U13-Pad16_ Net-_U13-Pad17_ Net-_U13-Pad18_ Net-_U13-Pad19_ Net-_U13-Pad20_ Net-_U13-Pad21_ Net-_U13-Pad22_ Net-_U13-Pad23_ Net-_U13-Pad24_ Net-_U13-Pad25_ Net-_U13-Pad26_ Net-_U13-Pad27_ Net-_U13-Pad28_ Net-_U13-Pad29_ Net-_U13-Pad30_ Net-_U13-Pad31_ Net-_U13-Pad32_ Net-_U13-Pad33_ Net-_U13-Pad34_ Net-_U13-Pad35_ Net-_U13-Pad36_ Net-_U13-Pad37_ Net-_U13-Pad38_ Net-_U13-Pad39_ Net-_U13-Pad40_ Net-_U13-Pad41_ Net-_U13-Pad42_ Net-_U13-Pad43_ Net-_U13-Pad44_ Net-_U13-Pad45_ Net-_U13-Pad46_ Net-_U13-Pad47_ Net-_U13-Pad48_ Net-_U13-Pad49_ Net-_U13-Pad50_ Net-_U13-Pad51_ Net-_U13-Pad52_ Net-_U13-Pad53_ Net-_U13-Pad54_ Net-_U13-Pad55_ Net-_U13-Pad56_ Net-_U13-Pad57_ Net-_U13-Pad58_ Net-_U13-Pad59_ Net-_U13-Pad60_ Net-_U13-Pad61_ Net-_U13-Pad62_ Net-_U13-Pad63_ Net-_U13-Pad64_ Net-_U13-Pad65_ Net-_U13-Pad66_ Net-_U13-Pad67_ Net-_U13-Pad68_ Net-_U13-Pad69_ Net-_U13-Pad70_ Net-_U13-Pad71_ Net-_U13-Pad72_ Net-_U13-Pad73_ glenn_ram128x32		
+U19  d2431 d2431 d2431 d2431 d2431 d2431 d2431 d2431 Net-_U13-Pad10_ Net-_U13-Pad11_ Net-_U13-Pad12_ Net-_U13-Pad13_ Net-_U13-Pad14_ Net-_U13-Pad15_ Net-_U13-Pad16_ Net-_U13-Pad17_ adc_bridge_8		
+U16  d07 d07 d07 d07 d07 d07 d07 d07 Net-_U13-Pad34_ Net-_U13-Pad35_ Net-_U13-Pad36_ Net-_U13-Pad37_ Net-_U13-Pad38_ Net-_U13-Pad39_ Net-_U13-Pad40_ Net-_U13-Pad41_ adc_bridge_8		
+U20  d815 d815 d815 d815 d815 d815 d815 d815 Net-_U13-Pad26_ Net-_U13-Pad27_ Net-_U13-Pad28_ Net-_U13-Pad29_ Net-_U13-Pad30_ Net-_U13-Pad31_ Net-_U13-Pad32_ Net-_U13-Pad33_ adc_bridge_8		
+U15  d1623 d1623 d1623 d1623 d1623 d1623 d1623 d1623 Net-_U13-Pad18_ Net-_U13-Pad19_ Net-_U13-Pad20_ Net-_U13-Pad21_ Net-_U13-Pad22_ Net-_U13-Pad23_ Net-_U13-Pad24_ Net-_U13-Pad25_ adc_bridge_8		
+U14  a6 a5 a4 a3 a2 a1 a0 Net-_U13-Pad3_ Net-_U13-Pad4_ Net-_U13-Pad5_ Net-_U13-Pad6_ Net-_U13-Pad7_ Net-_U13-Pad8_ Net-_U13-Pad9_ adc_bridge_7		
+U21  Net-_U13-Pad42_ Net-_U13-Pad43_ Net-_U13-Pad44_ Net-_U13-Pad45_ Net-_U13-Pad46_ Net-_U13-Pad47_ Net-_U13-Pad48_ Net-_U13-Pad49_ q31 q30 q29 q28 q27 q26 q25 q24 dac_bridge_8		
+U28  Net-_U13-Pad50_ Net-_U13-Pad51_ Net-_U13-Pad52_ Net-_U13-Pad53_ Net-_U13-Pad54_ Net-_U13-Pad55_ Net-_U13-Pad56_ Net-_U13-Pad57_ q23 q22 q21 q20 q19 q18 q17 q16 dac_bridge_8		
+U22  Net-_U13-Pad58_ Net-_U13-Pad59_ Net-_U13-Pad60_ Net-_U13-Pad61_ Net-_U13-Pad62_ Net-_U13-Pad63_ Net-_U13-Pad64_ Net-_U13-Pad65_ q15 q14 q13 q12 q11 q10 q9 q8 dac_bridge_8		
+U29  Net-_U13-Pad66_ Net-_U13-Pad67_ Net-_U13-Pad68_ Net-_U13-Pad69_ Net-_U13-Pad70_ Net-_U13-Pad71_ Net-_U13-Pad72_ Net-_U13-Pad73_ q7 q6 q5 q4 q3 q2 q1 q0 dac_bridge_8		
+v3  a5 GND pulse		
+v9  a0 GND pulse		
+v7  a1 GND pulse		
+v6  a2 GND pulse		
+v5  a3 GND pulse		
+v4  a4 GND pulse		
+v2  a6 GND pulse		
+U23  q31 plot_v1		
+U25  q29 plot_v1		
+U27  q27 plot_v1		
+U31  q25 plot_v1		
+U33  q23 plot_v1		
+U35  q21 plot_v1		
+U37  q19 plot_v1		
+U39  q17 plot_v1		
+U41  q15 plot_v1		
+U43  q13 plot_v1		
+U45  q11 plot_v1		
+U47  q9 plot_v1		
+U24  q30 plot_v1		
+U26  q28 plot_v1		
+U30  q26 plot_v1		
+U32  q24 plot_v1		
+U34  q22 plot_v1		
+U36  q20 plot_v1		
+U38  q18 plot_v1		
+U40  q16 plot_v1		
+U42  q14 plot_v1		
+U44  q12 plot_v1		
+U46  q10 plot_v1		
+U48  q8 plot_v1		
+U49  q7 plot_v1		
+U50  q6 plot_v1		
+U51  q5 plot_v1		
+U52  q4 plot_v1		
+U53  q3 plot_v1		
+U54  q2 plot_v1		
+U55  q1 plot_v1		
+U56  q0 plot_v1		
+U1  we plot_v1		
+U2  a6 plot_v1		
+U3  a5 plot_v1		
+U4  a4 plot_v1		
+U5  a3 plot_v1		
+U6  a2 plot_v1		
+U8  a1 plot_v1		
+U9  a0 plot_v1		
+U17  clk plot_v1		
+U11  d2431 plot_v1		
+U10  d1623 plot_v1		
+U12  d815 plot_v1		
+U7  d07 plot_v1		
+v13  Net-_R1-Pad1_ GND pulse		
+v1  we GND DC		
+R1  Net-_R1-Pad1_ clk 1k		
+U18  clk we Net-_U13-Pad1_ Net-_U13-Pad2_ adc_bridge_2		
+R2  ? GND 1k		
+v11  d815 GND DC		
+v10  d1623 GND DC		
+v8  d2431 GND DC		
+v12  d07 GND DC		
+
+.end

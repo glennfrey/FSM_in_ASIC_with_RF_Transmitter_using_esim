@@ -1,0 +1,160 @@
+* c:\users\glenn\esim-workspace\ram128x32\ram128x32.cir
+
+* u13  net-_u13-pad1_ net-_u13-pad2_ net-_u13-pad3_ net-_u13-pad4_ net-_u13-pad5_ net-_u13-pad6_ net-_u13-pad7_ net-_u13-pad8_ net-_u13-pad9_ net-_u13-pad10_ net-_u13-pad11_ net-_u13-pad12_ net-_u13-pad13_ net-_u13-pad14_ net-_u13-pad15_ net-_u13-pad16_ net-_u13-pad17_ net-_u13-pad18_ net-_u13-pad19_ net-_u13-pad20_ net-_u13-pad21_ net-_u13-pad22_ net-_u13-pad23_ net-_u13-pad24_ net-_u13-pad25_ net-_u13-pad26_ net-_u13-pad27_ net-_u13-pad28_ net-_u13-pad29_ net-_u13-pad30_ net-_u13-pad31_ net-_u13-pad32_ net-_u13-pad33_ net-_u13-pad34_ net-_u13-pad35_ net-_u13-pad36_ net-_u13-pad37_ net-_u13-pad38_ net-_u13-pad39_ net-_u13-pad40_ net-_u13-pad41_ net-_u13-pad42_ net-_u13-pad43_ net-_u13-pad44_ net-_u13-pad45_ net-_u13-pad46_ net-_u13-pad47_ net-_u13-pad48_ net-_u13-pad49_ net-_u13-pad50_ net-_u13-pad51_ net-_u13-pad52_ net-_u13-pad53_ net-_u13-pad54_ net-_u13-pad55_ net-_u13-pad56_ net-_u13-pad57_ net-_u13-pad58_ net-_u13-pad59_ net-_u13-pad60_ net-_u13-pad61_ net-_u13-pad62_ net-_u13-pad63_ net-_u13-pad64_ net-_u13-pad65_ net-_u13-pad66_ net-_u13-pad67_ net-_u13-pad68_ net-_u13-pad69_ net-_u13-pad70_ net-_u13-pad71_ net-_u13-pad72_ net-_u13-pad73_ glenn_ram128x32
+* u19  d2431 d2431 d2431 d2431 d2431 d2431 d2431 d2431 net-_u13-pad10_ net-_u13-pad11_ net-_u13-pad12_ net-_u13-pad13_ net-_u13-pad14_ net-_u13-pad15_ net-_u13-pad16_ net-_u13-pad17_ adc_bridge_8
+* u16  d07 d07 d07 d07 d07 d07 d07 d07 net-_u13-pad34_ net-_u13-pad35_ net-_u13-pad36_ net-_u13-pad37_ net-_u13-pad38_ net-_u13-pad39_ net-_u13-pad40_ net-_u13-pad41_ adc_bridge_8
+* u20  d815 d815 d815 d815 d815 d815 d815 d815 net-_u13-pad26_ net-_u13-pad27_ net-_u13-pad28_ net-_u13-pad29_ net-_u13-pad30_ net-_u13-pad31_ net-_u13-pad32_ net-_u13-pad33_ adc_bridge_8
+* u15  d1623 d1623 d1623 d1623 d1623 d1623 d1623 d1623 net-_u13-pad18_ net-_u13-pad19_ net-_u13-pad20_ net-_u13-pad21_ net-_u13-pad22_ net-_u13-pad23_ net-_u13-pad24_ net-_u13-pad25_ adc_bridge_8
+* u14  a6 a5 a4 a3 a2 a1 a0 net-_u13-pad3_ net-_u13-pad4_ net-_u13-pad5_ net-_u13-pad6_ net-_u13-pad7_ net-_u13-pad8_ net-_u13-pad9_ adc_bridge_7
+* u21  net-_u13-pad42_ net-_u13-pad43_ net-_u13-pad44_ net-_u13-pad45_ net-_u13-pad46_ net-_u13-pad47_ net-_u13-pad48_ net-_u13-pad49_ q31 q30 q29 q28 q27 q26 q25 q24 dac_bridge_8
+* u28  net-_u13-pad50_ net-_u13-pad51_ net-_u13-pad52_ net-_u13-pad53_ net-_u13-pad54_ net-_u13-pad55_ net-_u13-pad56_ net-_u13-pad57_ q23 q22 q21 q20 q19 q18 q17 q16 dac_bridge_8
+* u22  net-_u13-pad58_ net-_u13-pad59_ net-_u13-pad60_ net-_u13-pad61_ net-_u13-pad62_ net-_u13-pad63_ net-_u13-pad64_ net-_u13-pad65_ q15 q14 q13 q12 q11 q10 q9 q8 dac_bridge_8
+* u29  net-_u13-pad66_ net-_u13-pad67_ net-_u13-pad68_ net-_u13-pad69_ net-_u13-pad70_ net-_u13-pad71_ net-_u13-pad72_ net-_u13-pad73_ q7 q6 q5 q4 q3 q2 q1 q0 dac_bridge_8
+v3  a5 gnd pulse(0 5 0.1m 0.1m 0.1m 32 64)
+v9  a0 gnd pulse(0 5 0.1m 0.1m 0.1m 1 2)
+v7  a1 gnd pulse(0 5 0.1m 0.1m 0.1m 2 4)
+v6  a2 gnd pulse(0 5 0.1m 0.1m 0.1m 4 8)
+v5  a3 gnd pulse(0 5 0.1m 0.1m 0.1m 8 16)
+v4  a4 gnd pulse(0 5 0.1m 0.1m 0.1m 16 32)
+v2  a6 gnd pulse(0 5 0.1m 0.1m 0.1m 64 128)
+* u23  q31 plot_v1
+* u25  q29 plot_v1
+* u27  q27 plot_v1
+* u31  q25 plot_v1
+* u33  q23 plot_v1
+* u35  q21 plot_v1
+* u37  q19 plot_v1
+* u39  q17 plot_v1
+* u41  q15 plot_v1
+* u43  q13 plot_v1
+* u45  q11 plot_v1
+* u47  q9 plot_v1
+* u24  q30 plot_v1
+* u26  q28 plot_v1
+* u30  q26 plot_v1
+* u32  q24 plot_v1
+* u34  q22 plot_v1
+* u36  q20 plot_v1
+* u38  q18 plot_v1
+* u40  q16 plot_v1
+* u42  q14 plot_v1
+* u44  q12 plot_v1
+* u46  q10 plot_v1
+* u48  q8 plot_v1
+* u49  q7 plot_v1
+* u50  q6 plot_v1
+* u51  q5 plot_v1
+* u52  q4 plot_v1
+* u53  q3 plot_v1
+* u54  q2 plot_v1
+* u55  q1 plot_v1
+* u56  q0 plot_v1
+* u1  we plot_v1
+* u2  a6 plot_v1
+* u3  a5 plot_v1
+* u4  a4 plot_v1
+* u5  a3 plot_v1
+* u6  a2 plot_v1
+* u8  a1 plot_v1
+* u9  a0 plot_v1
+* u17  clk plot_v1
+* u11  d2431 plot_v1
+* u10  d1623 plot_v1
+* u12  d815 plot_v1
+* u7  d07 plot_v1
+v13  net-_r1-pad1_ gnd pulse(0 5 0.1m 0.1m 0.1m 1 2)
+v1 we gnd  dc 5
+r1  net-_r1-pad1_ clk 1k
+* u18  clk we net-_u13-pad1_ net-_u13-pad2_ adc_bridge_2
+r2  ? gnd 1k
+v11 d815 gnd  dc 5
+v10 d1623 gnd  dc 5
+v8 d2431 gnd  dc 5
+v12 d07 gnd  dc 5
+a1 [net-_u13-pad1_ ] [net-_u13-pad2_ ] [net-_u13-pad3_ net-_u13-pad4_ net-_u13-pad5_ net-_u13-pad6_ net-_u13-pad7_ net-_u13-pad8_ net-_u13-pad9_ ] [net-_u13-pad10_ net-_u13-pad11_ net-_u13-pad12_ net-_u13-pad13_ net-_u13-pad14_ net-_u13-pad15_ net-_u13-pad16_ net-_u13-pad17_ net-_u13-pad18_ net-_u13-pad19_ net-_u13-pad20_ net-_u13-pad21_ net-_u13-pad22_ net-_u13-pad23_ net-_u13-pad24_ net-_u13-pad25_ net-_u13-pad26_ net-_u13-pad27_ net-_u13-pad28_ net-_u13-pad29_ net-_u13-pad30_ net-_u13-pad31_ net-_u13-pad32_ net-_u13-pad33_ net-_u13-pad34_ net-_u13-pad35_ net-_u13-pad36_ net-_u13-pad37_ net-_u13-pad38_ net-_u13-pad39_ net-_u13-pad40_ net-_u13-pad41_ ] [net-_u13-pad42_ net-_u13-pad43_ net-_u13-pad44_ net-_u13-pad45_ net-_u13-pad46_ net-_u13-pad47_ net-_u13-pad48_ net-_u13-pad49_ net-_u13-pad50_ net-_u13-pad51_ net-_u13-pad52_ net-_u13-pad53_ net-_u13-pad54_ net-_u13-pad55_ net-_u13-pad56_ net-_u13-pad57_ net-_u13-pad58_ net-_u13-pad59_ net-_u13-pad60_ net-_u13-pad61_ net-_u13-pad62_ net-_u13-pad63_ net-_u13-pad64_ net-_u13-pad65_ net-_u13-pad66_ net-_u13-pad67_ net-_u13-pad68_ net-_u13-pad69_ net-_u13-pad70_ net-_u13-pad71_ net-_u13-pad72_ net-_u13-pad73_ ] u13
+a2 [d2431 d2431 d2431 d2431 d2431 d2431 d2431 d2431 ] [net-_u13-pad10_ net-_u13-pad11_ net-_u13-pad12_ net-_u13-pad13_ net-_u13-pad14_ net-_u13-pad15_ net-_u13-pad16_ net-_u13-pad17_ ] u19
+a3 [d07 d07 d07 d07 d07 d07 d07 d07 ] [net-_u13-pad34_ net-_u13-pad35_ net-_u13-pad36_ net-_u13-pad37_ net-_u13-pad38_ net-_u13-pad39_ net-_u13-pad40_ net-_u13-pad41_ ] u16
+a4 [d815 d815 d815 d815 d815 d815 d815 d815 ] [net-_u13-pad26_ net-_u13-pad27_ net-_u13-pad28_ net-_u13-pad29_ net-_u13-pad30_ net-_u13-pad31_ net-_u13-pad32_ net-_u13-pad33_ ] u20
+a5 [d1623 d1623 d1623 d1623 d1623 d1623 d1623 d1623 ] [net-_u13-pad18_ net-_u13-pad19_ net-_u13-pad20_ net-_u13-pad21_ net-_u13-pad22_ net-_u13-pad23_ net-_u13-pad24_ net-_u13-pad25_ ] u15
+a6 [a6 a5 a4 a3 a2 a1 a0 ] [net-_u13-pad3_ net-_u13-pad4_ net-_u13-pad5_ net-_u13-pad6_ net-_u13-pad7_ net-_u13-pad8_ net-_u13-pad9_ ] u14
+a7 [net-_u13-pad42_ net-_u13-pad43_ net-_u13-pad44_ net-_u13-pad45_ net-_u13-pad46_ net-_u13-pad47_ net-_u13-pad48_ net-_u13-pad49_ ] [q31 q30 q29 q28 q27 q26 q25 q24 ] u21
+a8 [net-_u13-pad50_ net-_u13-pad51_ net-_u13-pad52_ net-_u13-pad53_ net-_u13-pad54_ net-_u13-pad55_ net-_u13-pad56_ net-_u13-pad57_ ] [q23 q22 q21 q20 q19 q18 q17 q16 ] u28
+a9 [net-_u13-pad58_ net-_u13-pad59_ net-_u13-pad60_ net-_u13-pad61_ net-_u13-pad62_ net-_u13-pad63_ net-_u13-pad64_ net-_u13-pad65_ ] [q15 q14 q13 q12 q11 q10 q9 q8 ] u22
+a10 [net-_u13-pad66_ net-_u13-pad67_ net-_u13-pad68_ net-_u13-pad69_ net-_u13-pad70_ net-_u13-pad71_ net-_u13-pad72_ net-_u13-pad73_ ] [q7 q6 q5 q4 q3 q2 q1 q0 ] u29
+a11 [clk we ] [net-_u13-pad1_ net-_u13-pad2_ ] u18
+* Schematic Name:                             glenn_ram128x32, NgSpice Name: glenn_ram128x32
+.model u13 glenn_ram128x32(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             adc_bridge_8, NgSpice Name: adc_bridge
+.model u19 adc_bridge(in_low=1.0 in_high=2.0 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             adc_bridge_8, NgSpice Name: adc_bridge
+.model u16 adc_bridge(in_low=1.0 in_high=2.0 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             adc_bridge_8, NgSpice Name: adc_bridge
+.model u20 adc_bridge(in_low=1.0 in_high=2.0 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             adc_bridge_8, NgSpice Name: adc_bridge
+.model u15 adc_bridge(in_low=1.0 in_high=2.0 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             adc_bridge_7, NgSpice Name: adc_bridge
+.model u14 adc_bridge(in_low=1.0 in_high=2.0 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             dac_bridge_8, NgSpice Name: dac_bridge
+.model u21 dac_bridge(out_low=0.0 out_high=5.0 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+* Schematic Name:                             dac_bridge_8, NgSpice Name: dac_bridge
+.model u28 dac_bridge(out_low=0.0 out_high=5.0 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+* Schematic Name:                             dac_bridge_8, NgSpice Name: dac_bridge
+.model u22 dac_bridge(out_low=0.0 out_high=5.0 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+* Schematic Name:                             dac_bridge_8, NgSpice Name: dac_bridge
+.model u29 dac_bridge(out_low=0.0 out_high=5.0 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+* Schematic Name:                             adc_bridge_2, NgSpice Name: adc_bridge
+.model u18 adc_bridge(in_low=1.0 in_high=2.0 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+.tran .1e-00 512e-00 1e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(q31)
+plot v(q29)
+plot v(q27)
+plot v(q25)
+plot v(q23)
+plot v(q21)
+plot v(q19)
+plot v(q17)
+plot v(q15)
+plot v(q13)
+plot v(q11)
+plot v(q9)
+plot v(q30)
+plot v(q28)
+plot v(q26)
+plot v(q24)
+plot v(q22)
+plot v(q20)
+plot v(q18)
+plot v(q16)
+plot v(q14)
+plot v(q12)
+plot v(q10)
+plot v(q8)
+plot v(q7)
+plot v(q6)
+plot v(q5)
+plot v(q4)
+plot v(q3)
+plot v(q2)
+plot v(q1)
+plot v(q0)
+plot v(we)
+plot v(a6)
+plot v(a5)
+plot v(a4)
+plot v(a3)
+plot v(a2)
+plot v(a1)
+plot v(a0)
+plot v(clk)
+plot v(d2431)
+plot v(d1623)
+plot v(d815)
+plot v(d07)
+.endc
+.end

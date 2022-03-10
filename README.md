@@ -59,7 +59,7 @@ rain sensor, light sensor, and moisture sensor. Each of which has its own interf
 ![](hackathonpics/RAM_makerchip_we_1.png)
 ![](hackathonpics/RAM_makerchip_we_1_output.png)
 
-## 8bitDecoder_Block
+## 3bitDecoder_Block
 ![](hackathonpics/8bitDecoder_makerchip.png)
 ![](hackathonpics/8bitDecoder_tb.png)
 ![](hackathonpics/8bitDecoder_ngspice_waveform.png)

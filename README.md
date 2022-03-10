@@ -6,14 +6,12 @@
   * [Desirable Truth Table](#desirable-truth-table)
   * [Tools Used](#tools-used)
 - [Simulation in Synopsys](#simulation-in-synopsys)
-  * [Inverter_Block](#inverter_block)
-  * [Carry_Block](#carry_block)
-  * [Sum_Block](#sum_block)
-  * [Parameters set for Voltage Source for Input A](#parameters-set-for-voltage-source-for-input-a)
-  * [Parameters set for Voltage Source for Input B](#parameters-set-for-voltage-source-for-input-b)
-  * [Parameters set for Voltage Source for Input C](#parameters-set-for-voltage-source-for-input-c)
-  * [Transient Settings](#transient-settings)
-  * [Schematic of Full_Adder using the above Blocks](#schematic-of-full_adder-using-the-above-blocks)
+  * [XOR_Block](#xor_block)
+  * [Carry_Lookahead_bit1_Block](#carry_lookahead_bit1_block)
+  * [Carry_Lookahead_bit2_Block](#carry_lookahead_bit2_block)
+  * [Carry_Lookahead_bit3_Block](#carry_lookahead_bit3_block)
+  * [Carry_Lookahead_bit4_Block](#carry_lookahead_bit4_block)
+  * [Carry_Lookahead_Adder_4bit](#carry_lookahead_adder_4bit)
   * [Output Waveform](#output-waveform)
   * [Netlist](#netlist)
   * [Conclusion](#conclusion)
@@ -32,13 +30,17 @@ rain sensor, light sensor, and moisture sensor. Each of which has its own interf
 
 
 ## Reference Circuit Diagram
-<img width="1371" alt="Reference_Ckt" src="https://user-images.githubusercontent.com/59500283/155388072-53c63be1-69c2-4d84-90e7-4cb95889fb67.png">
+![](analog/reference_circuit.png)
+##### CLA bit 1-4
+![](analog/CLA_reference_circuit.png)
+##### XOR
+![](analog/xor.png)
 
 ## Reference Circuit Waveform
-<img width="1436" alt="Reference_Waveform" src="https://user-images.githubusercontent.com/59500283/155388452-6be190ea-c1f7-40b9-b905-c51b84594cd4.png">
+![](analog/CLA_reference_waveform.png)
 
 ## Desirable Truth Table
-![Full_adder_Truth_Table](https://user-images.githubusercontent.com/59500283/155389650-b7823b97-2f40-4cf2-bb7a-72e5364af9b2.jpeg)
+![](truth_table.png)
 
 
 ## Tools Used:
@@ -55,135 +57,276 @@ rain sensor, light sensor, and moisture sensor. Each of which has its own interf
  The Synopsys 28nm Process Design Kit(PDK) was used in creation and simulation of the above designed circuit.
 
 # Simulation in Synopsys
-## Inverter_Block
-<img width="652" alt="Inverter_Block" src="https://user-images.githubusercontent.com/59500283/155388618-816e32ce-0ad8-4ee1-a714-6e3a7c4a64df.png">
-<img width="660" alt="Inverter_Symbol" src="https://user-images.githubusercontent.com/59500283/155388658-538a86b3-c842-47f0-beb3-12bd8d25db28.png">
+## XOR_Block
+![](analog/xor_schematic.png)
+![](analog/xo_tb.png)
+![](analog/xor_waveform.png)
 
-## Carry_Block
+## Carry_Lookahead_bit1_Block
+![](analog/CLA_1_schematic.png)
+![](analog/CLA_1_tb.png)
+![](analog/CLA_1_waveform.png)
 
-<img width="1422" alt="Carry_Block" src="https://user-images.githubusercontent.com/59500283/155388804-95e2aeb2-7f21-456e-bb09-ebc4cecf9253.png">
-<img width="590" alt="Carry_Symbol" src="https://user-images.githubusercontent.com/59500283/155388883-20e31e93-54c2-497b-9062-3c1d7e855d4c.png">
+## Carry_Lookahead_bit2_Block
+![](analog/CLA_2_schematic.png)
+![](analog/CLA_2_tb.png)
+![](analog/CLA_2_waveform.png)
 
-## Sum_Block
-<img width="1440" alt="Sum_Block" src="https://user-images.githubusercontent.com/59500283/155390426-86a5188d-2bf9-46fc-9396-1412fb35c22c.png">
-<img width="1432" alt="Sum_Symbol" src="https://user-images.githubusercontent.com/59500283/155390464-23c4c947-44cc-4dde-8aed-828c80fe98f7.png">
+## Carry_Lookahead_bit3_Block
+![](analog/CLA_3_schematic.png)
+![](analog/CLA_3_tb.png)
+![](analog/CLA_3_waveform.png)
 
+## Carry_Lookahead_bit4_Block
+![](analog/CLA_4_schematic.png)
+![](analog/CLA_4_tb.png)
+![](analog/CLA_4_waveform.png)
+![](analog/CLA_4_waveform1.png)
+![](analog/CLA_4_waveform2.png)
+![](analog/CLA_4_waveform3.png)
 
-## Parameters set for Voltage Source for Input A
-<img width="357" alt="A_Pulse" src="https://user-images.githubusercontent.com/59500283/155388964-19e9a68d-e11c-4b39-8a08-1bdd65005658.png">
-
-## Parameters set for Voltage Source for Input B
-<img width="357" alt="B_Pulse" src="https://user-images.githubusercontent.com/59500283/155388995-879f0e25-8a64-4e78-bd85-e79c15a113f4.png">
-
-## Parameters set for Voltage Source for Input C
-<img width="354" alt="C_Pulse" src="https://user-images.githubusercontent.com/59500283/155389151-0461b3bf-d8d1-4464-a471-0056d355ffc4.png">
-
-
-## Transient Settings
-<img width="675" alt="Transient_Analysis" src="https://user-images.githubusercontent.com/59500283/155389323-55075cf7-a4e3-4ee8-8d6a-52facd7a74bf.png">
-
-## Schematic of Full_Adder using the above Blocks
-<img width="1431" alt="Final_Design" src="https://user-images.githubusercontent.com/59500283/155389447-252a7eb4-16f6-4aee-96d4-76d396d15b0e.png">
+## Carry_Lookahead_Adder_4bit
+![](analog/CLA_final_schematic.png)
+![](analog/CLA_final_tb.png)
+![](analog/CLA_final_waveform.png)
 
 ## Output Waveform
-<img width="1435" alt="Output" src="https://user-images.githubusercontent.com/59500283/155389768-d8bf8e3f-72a5-426d-b366-3b6548f98d23.png">
+![](analog/CLA_final_waveform1.png)
+![](analog/CLA_final_waveform2.png)
+![](analog/CLA_final_waveform3.png)
+![](analog/CLA_final_waveform4.png)
 
 
 ## Netlist
 ```
 
-
 *  Generated for: PrimeSim
-*  Design library name: full_adder
-*  Design cell name: Carry_tb
+*  Design library name: glenn_DAC_new
+*  Design cell name: glenn_CLAfinal_tb
 *  Design view name: schematic
 .lib 'saed32nm.lib' TT
 
 *Custom Compiler Version S-2021.09
-*Wed Feb 23 18:37:06 2022
+*Sat Feb 26 09:55:29 2022
 
 .global gnd!
 ********************************************************************************
-* Library          : full_adder
-* Cell             : Carry_Block
+* Library          : glenn_DAC_new
+* Cell             : glenn_xor_new
 * View             : schematic
 * View Search List : hspice hspiceD schematic spice veriloga
 * View Stop List   : hspice hspiceD
 ********************************************************************************
-.subckt carry_block a b c gnd_1 vdd carry
-xm11 carry carry_bar gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
-xm8 net30 a gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
-xm7 carry_bar b net30 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
-xm2 net9 b gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
-xm1 net9 a gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
-xm31 carry_bar c net9 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
-xm12 carry carry_bar vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
-xm10 net34 a vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
-xm9 carry_bar b net34 vdd p105 w=0.1u l=0.03u nf=1 m=1
-xm5 net23 b vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
-xm4 net23 a vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
-xm3 carry_bar c net23 vdd p105 w=0.1u l=0.03u nf=1 m=1
-.ends carry_block
+.subckt glenn_xor_new a b sum vdda vssa
+xm5 net53 a vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm4 net52 b vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm3 sum net52 net13 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm2 net13 a vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm1 sum net53 net5 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm0 net5 b vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm11 net53 a vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm10 net52 b vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm9 net37 a vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm8 sum b net37 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm7 net29 net53 vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm6 sum net52 net29 vssa n105 w=0.1u l=0.03u nf=1 m=1
+.ends glenn_xor_new
 
 ********************************************************************************
-* Library          : full_adder
-* Cell             : Inverter
+* Library          : glenn_DAC_new
+* Cell             : glenn_CLA1
 * View             : schematic
 * View Search List : hspice hspiceD schematic spice veriloga
 * View Stop List   : hspice hspiceD
 ********************************************************************************
-.subckt inverter gnd_1 input not vdd
-xm0 not input vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
-xm1 not input gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
-.ends inverter
+.subckt glenn_cla1 a b c c1 vdda vssa
+xm5 c1 net54 vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm4 net54 b net17 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm3 net17 a vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm2 net54 a net9 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm1 net54 b net9 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm0 net9 c vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm11 net45 a vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm10 net54 b net45 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm9 net54 b vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm8 net33 c vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm7 net54 a net33 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm6 c1 net54 vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+.ends glenn_cla1
 
 ********************************************************************************
-* Library          : full_adder
-* Cell             : Sum_Block
+* Library          : glenn_DAC_new
+* Cell             : glenn_CLA2
 * View             : schematic
 * View Search List : hspice hspiceD schematic spice veriloga
 * View Stop List   : hspice hspiceD
 ********************************************************************************
-.subckt sum_block a b c carry_bar gnd_1 sum_bar vdd
-xm29 sum_bar c net174 vdd p105 w=0.1u l=0.03u nf=1 m=1
-xm30 net174 b net178 vdd p105 w=0.1u l=0.03u nf=1 m=1
-xm31 net178 a net111 vdd p105 w=0.1u l=0.03u nf=1 m=1
-xm18 net111 c vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
-xm19 sum_bar carry_bar net111 vdd p105 w=0.1u l=0.03u nf=1 m=1
-xm20 net111 a vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
-xm21 net111 b vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
-xm26 sum_bar c net160 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
-xm28 net164 b gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
-xm27 net160 a net164 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
-xm23 net150 a gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
-xm22 sum_bar carry_bar net150 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
-xm24 net150 b gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
-xm25 net150 c gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
-.ends sum_block
+.subckt glenn_cla2 a0 a1 b0 b1 c0 c2 vdda vssa
+xm9 c2 net80 vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm8 net80 a1 net33 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm7 net33 a0 net27 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm6 net27 c0 vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm5 net33 b0 net27 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm4 net80 b1 net33 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm3 net33 b0 net13 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm2 net13 a0 vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm1 net80 b1 net5 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm0 net5 a1 vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm19 c2 net80 vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm18 net73 c0 vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm17 net69 a0 net73 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm16 net80 a1 net69 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm15 net69 b0 net73 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm14 net57 a0 vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm13 net69 b0 net57 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm12 net80 b1 net69 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm11 net45 a1 vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm10 net80 b1 net45 vssa n105 w=0.1u l=0.03u nf=1 m=1
+.ends glenn_cla2
 
 ********************************************************************************
-* Library          : full_adder
-* Cell             : Carry_tb
+* Library          : glenn_DAC_new
+* Cell             : glenn_CLA3
 * View             : schematic
 * View Search List : hspice hspiceD schematic spice veriloga
 * View Stop List   : hspice hspiceD
 ********************************************************************************
-xi24 a b c gnd! net55 carry carry_block
-v1 net55 gnd! dc='1.8V'
-v22 c gnd! dc=0 pulse ( 0 1.8 0 0.1u 0.1u 20u 40u )
-v21 b gnd! dc=0 pulse ( 0 1.8 0 0.1u 0.1u 10u 20u )
-v20 a gnd! dc=0 pulse ( 0 1.8 0 0.1u 0.1u 5u 10u )
-c2 carry gnd! c=1p
-c19 sum gnd! c=1p
-xi23 gnd! net50 sum net55 inverter
-xi9 gnd! carry net33 net55 inverter
-xi15 a b c net33 gnd! net50 net55 sum_block
+.subckt glenn_cla3 a0 a1 a2 b0 b1 b2 c0 c3 vdda vssa
+xm13 net77 b2 net53 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm12 net53 a2 vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm11 net77 b2 net45 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm10 net45 b1 net41 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm9 net41 a1 vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm8 net45 b1 net33 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm7 net33 b0 net115 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm6 net115 a0 vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm5 net33 b0 net29 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm4 c3 net77 vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm3 net77 a2 net45 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm2 net45 a1 net33 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm1 net33 a0 net29 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm0 net29 c0 vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm27 net109 a2 vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm26 net105 a1 vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm25 net101 b1 net105 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm24 net97 a0 vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm23 net93 b0 net97 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm22 net89 c0 vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm21 net93 a0 net89 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm20 net101 a1 net93 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm19 net77 b2 net109 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm18 net77 b2 net101 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm17 net101 b1 net93 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm16 net93 b0 net89 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm15 c3 net77 vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm14 net77 a2 net101 vssa n105 w=0.1u l=0.03u nf=1 m=1
+.ends glenn_cla3
 
-.tran '1u' '40u' name=tran
+********************************************************************************
+* Library          : glenn_DAC_new
+* Cell             : glenn_CLA4
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt glenn_cla4 a0 a1 a2 a3 b0 b1 b2 b3 c0 vdda vssa vout
+xm17 net109 b3 net69 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm16 net69 a3 vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm15 net109 b3 net61 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm14 net61 b2 net57 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm13 net57 a2 vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm12 net51 a1 vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm11 net47 b1 net51 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm10 net61 b2 net47 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm9 net47 b1 net37 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm8 net37 b0 net33 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm7 net33 a0 vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm6 net37 b0 net5 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm5 vout net109 vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm4 net109 a3 net61 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm3 net61 a2 net47 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm2 net47 a1 net37 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm1 net37 a0 net5 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm0 net5 c0 vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm35 net133 b0 net89 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm34 net137 a0 vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm33 net133 b0 net137 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm32 net113 b1 net133 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm31 net125 a1 vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm30 net121 a3 vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm29 net117 a2 vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm28 net113 b1 net125 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm27 net109 b3 net121 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm26 net105 b2 net117 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm25 net109 b3 net105 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm24 net105 b2 net113 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm23 vout net109 vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm22 net89 c0 vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm21 net133 a0 net89 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm20 net113 a1 net133 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm19 net105 a2 net113 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm18 net109 a3 net105 vssa n105 w=0.1u l=0.03u nf=1 m=1
+.ends glenn_cla4
+
+********************************************************************************
+* Library          : glenn_DAC_new
+* Cell             : glenn_CLAfinal
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt glenn_clafinal a0 a1 a2 a3 b0 b1 b2 b3 c0 c4 s0 s1 s2 s3 vdda vssa
+xi3 a3 b3 net135 vdda vssa glenn_xor_new
+xi0 a2 b2 net136 vdda vssa glenn_xor_new
+xi4 net135 net141 s3 vdda vssa glenn_xor_new
+xi28 a0 b0 net149 vdda vssa glenn_xor_new
+xi1 a1 b1 net137 vdda vssa glenn_xor_new
+xi29 c0 net149 s0 vdda vssa glenn_xor_new
+xi6 net163 net137 s1 vdda vssa glenn_xor_new
+xi5 net139 net136 s2 vdda vssa glenn_xor_new
+xi8 a0 b0 c0 net163 vdda vssa glenn_cla1
+xi9 a0 a1 b0 b1 c0 net139 vdda vssa glenn_cla2
+xi10 a0 a1 a2 b0 b1 b2 c0 net141 vdda vssa glenn_cla3
+xi11 a0 a1 a2 a3 b0 b1 b2 b3 c0 vdda vssa c4 glenn_cla4
+.ends glenn_clafinal
+
+********************************************************************************
+* Library          : glenn_DAC_new
+* Cell             : glenn_CLAfinal_tb
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+xi0 a0 a1 a2 a3 b0 b1 b2 b3 c0 c4 s0 s1 s2 s3 net35 gnd! glenn_clafinal
+v25 c0 gnd! dc=0 pulse ( 0 1 0 .1u .1u 320u 640u )
+v24 b3 gnd! dc=0 pulse ( 0 1 0 .1u .1u 160u 320u )
+v23 b2 gnd! dc=0 pulse ( 0 1 0 .1u .1u 80u 160u )
+v22 b1 gnd! dc=0 pulse ( 0 1 0 .1u .1u 40u 80u )
+v21 b0 gnd! dc=0 pulse ( 0 1 0 .1u .1u 20u 40u )
+v20 a3 gnd! dc=0 pulse ( 0 1 0 .1u .1u 10u 20u )
+v19 a2 gnd! dc=0 pulse ( 0 1 0 .1u .1u 5u 10u )
+v18 a1 gnd! dc=0 pulse ( 0 1 0 .1u .1u 2.5u 5u )
+v17 a0 gnd! dc=0 pulse ( 0 1 0 .1u .1u 1.25u 2.5u )
+v26 net35 gnd! dc=1
+c15 c4 gnd! c=1p
+c14 s0 gnd! c=1p
+c13 s1 gnd! c=1p
+c12 s2 gnd! c=1p
+c11 s3 gnd! c=1p
+
+
+
+
+
+
+
+
+.tran '1u' '640u' name=tran
 
 .option primesim_remove_probe_prefix = 0
 .probe v(*) i(*) level=1
-.probe tran v(a) v(b) v(c) v(carry) v(sum)
+.probe tran v(a0) v(a1) v(a2) v(a3) v(b0) v(b1) v(b2) v(b3) v(c0) v(c4) v(s0)
++ v(s1) v(s2) v(s3)
 
 .temp 25
 
@@ -196,15 +339,17 @@ xi15 a b c net33 gnd! net50 net55 sum_block
 
 
 
+
+
+
 .end
+
 
 ```
 
-## Conclusion
-Thus, the addition for a single-bit is achieved using 28T full adder.
 
 ## Author
-Mayur Dongre , Indian Institute of Information Technoology Nagpur.
+Glenn Frey Olamit , self.
 ## Acknowledgement
 1. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
 2. Chinmay panda, IIT Hyderabad
@@ -212,10 +357,10 @@ Mayur Dongre , Indian Institute of Information Technoology Nagpur.
 4. [Synopsys Team/Company](https://www.synopsys.com/)
 5. https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/
 ## References
-1)Analysis and Performance Evaluation of 1-bit Full Adder Using Different Topologies
-http://pnrsolution.org/Datacenter/Vol5/Issue1/26.pdf
+I. S. Dhanjal. 4 bit carry look ahead adder transistor level
+implementation using static cmos logic.
+https://youtu.be/WItAXzrfPrE
 
-2)Power and Delay Comparison in between Different types of Full Adder Circuits
-https://www.ijareeie.com/upload/september/7_Power%20and%20Delay%20Comparison.pdf
-
-3)Youtube Video - https://www.youtube.com/watch?v=AXU_J4wr_yA
+M. Hasan. High-performance design of a 4-bit carry look-ahead adder
+in static cmos logic.
+http://section.iaesonline.com/index.php/IJEEI/article/view/2582

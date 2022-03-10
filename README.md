@@ -28,17 +28,17 @@ Finite State Machine (FSM) in ApplicationSpecific Integrated Circuit (ASIC) is h
 
 SoC will be composed of FSM, ADC, DAC, I2C, SPI, CAN, RAM, UART and the RF block. I2C, SPI, CAN and ADC will be connected to sensors. DAC will be connected toLED light to control its power. Sensors reading will be recorded every minute and send to remote PC wirelessly via UART every hour. Digital output will be connected to optorelay to control valves for irrigation. The sensors are the temperature sensor, humidity sensor,
 rain sensor, light sensor, and moisture sensor. Each of which has its own interface like CAN, SPI, I2C and some are analog. RF block will be connected to antenna. Opto-relay will be connected to digital output of SoC. The LED display will be connected to DAC block..
-
+![](ref.png)
 
 ## Reference Circuit Diagram
-![](ref.png)
+![](ref2.png)
 
 
 ## Reference Circuit Waveform
-![](ref2.png)
-
-## Desirable Truth Table
 ![](ref3.png)
+
+## Desirable State Diagram
+
 
 
 ## Tools Used:

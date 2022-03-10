@@ -43,7 +43,7 @@ rain sensor, light sensor, and moisture sensor. Each of which has its own interf
 
 ## Tools Used:
 • esim:
- esim design environment is a modern solution for full-custom analog, custom digital, and mixed-signal IC design. As the heart of the Synopsys Custom Design Platform, Custom Compiler provides design entry, simulation management and analysis, and custom layout editing features. This tool was used to design the circuit on a transistor level.
+ esim design environment is a modern solution for full-custom analog, custom digital, and mixed-signal IC design. esim provides design entry, simulation management and analysis, and custom layout editing features. This tool was used to design the circuit on a transistor level.
  ![](ref4.png)
 
 

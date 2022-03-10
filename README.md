@@ -5,13 +5,14 @@
   * [Reference Circuit Waveform](#reference-circuit-waveform)
   * [Desirable Truth Table](#desirable-truth-table)
   * [Tools Used](#tools-used)
-- [Simulation in Synopsys](#simulation-in-synopsys)
-  * [XOR_Block](#xor_block)
-  * [Carry_Lookahead_bit1_Block](#carry_lookahead_bit1_block)
-  * [Carry_Lookahead_bit2_Block](#carry_lookahead_bit2_block)
-  * [Carry_Lookahead_bit3_Block](#carry_lookahead_bit3_block)
-  * [Carry_Lookahead_bit4_Block](#carry_lookahead_bit4_block)
-  * [Carry_Lookahead_Adder_4bit](#carry_lookahead_adder_4bit)
+- [Simulation in esim](#simulation-in-esim)
+  * [FSM_Block](#fsm_block)
+  * [RAM128X32_Block](#ram128x32_block)
+  * [3bitDecoder_Block](#3bitdecoder_block)
+  * [UART_Block](#uart_block)
+  * [PISO_Block](#piso)block)
+  * [UpDownCOUNTER_Block](#updowncounter_block)
+  * [ASIC_Digital_Block](#asic_digital_block)
   * [Output Waveform](#output-waveform)
   * [Netlist](#netlist)
   * [Conclusion](#conclusion)
@@ -30,26 +31,23 @@ rain sensor, light sensor, and moisture sensor. Each of which has its own interf
 
 
 ## Reference Circuit Diagram
-![](analog/reference_circuit.png)
-##### CLA bit 1-4
-![](analog/CLA_reference_circuit.png)
-##### XOR
-![](analog/xor.png)
+![](ref.png)
+
 
 ## Reference Circuit Waveform
-![](analog/CLA_reference_waveform.png)
+![](ref2.png)
 
 ## Desirable Truth Table
-![](truth_table.png)
+![](ref3.png)
 
 
 ## Tools Used:
 • esim:
  esim design environment is a modern solution for full-custom analog, custom digital, and mixed-signal IC design. As the heart of the Synopsys Custom Design Platform, Custom Compiler provides design entry, simulation management and analysis, and custom layout editing features. This tool was used to design the circuit on a transistor level.
- 
+ ![](ref4.png)
 
 
-# Simulation in Synopsys
+# Simulation in esim
 ## FSM_Block
 ![](hackathonpics/FSM_makerchip.png)
 
@@ -356,8 +354,9 @@ Glenn Frey Olamit , self.
 1. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
 2. Chinmay panda, IIT Hyderabad
 3. Sameer Durgoji, NIT Karnataka
-4. [esim Team/Company](https://hackathon.fossee.in/esim/home)
-5. https://hackathon.fossee.in/esim/home
+4. Steve Hoover, Founder Redwood EDA, LLC - redwoodeda.com
+5. [esim Team/Company](https://hackathon.fossee.in/esim/home)
+6. https://hackathon.fossee.in/esim/home
 ## References
 Generation of ASK signal using multisim software | Amplitude shift
 keying | Acts of Facts..

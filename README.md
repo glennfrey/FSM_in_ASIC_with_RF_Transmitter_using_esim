@@ -1,4 +1,4 @@
-# 28T_Full_Adder using 28nm CMOS Technology
+# FSM in ASIC with RF Transmitter using esim
   * [Abstract](#abstract)
   * [Reference Circuit Details](#reference-circuit-details)
   * [Reference Circuit Diagram](#reference-circuit-diagram)

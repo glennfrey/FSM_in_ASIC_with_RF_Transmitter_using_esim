@@ -7,10 +7,10 @@
   * [Tools Used](#tools-used)
 - [Simulation in esim](#simulation-in-esim)
   * [FSM_Digital_Block](#fsm-digital-block)
-  * [RAM128X32_Block](#ram128x32-digital-block)
-  * [3bitDecoder_Block](#3bitdecoder-digital-block)
-  * [UART_Block](#uart-digital-block)
-  * [PISO_Block](#piso-digital-block)
+  * [RAM128X32_Digital_Block](#ram128x32-digital-block)
+  * [3bitDecoder_Digital_Block](#3bitdecoder-digital-block)
+  * [UART_Digital_Block](#uart-digital-block)
+  * [PISO_Digital_Block](#piso-digital-block)
   * [ASIC_Digital_Block](#asic-digital-block)
   * [Output Waveform](#output-waveform)
   * [DAC_Mixed_Block](#DAC-Mixed-Block)
@@ -120,8 +120,9 @@ rain sensor, light sensor, and moisture sensor. Each of which has its own interf
 ![](hackathonpics2/updowncounrter_waveform2.png)
 
 ## ADC_Mixed_Block
-![](hackathonpics2/ASIC_ngspice.png)
-![](hackathonpics2/ASIC_ngspice.png)
+![](adc_schematic.png)
+![](hackathonpics2/adc_waveform.png)
+![](hackathonpics2/adc_waveform2.png)
 
 ## Amplitude_Shift_Keying_ASK_Analog_Block
 ![](hackathonpics2/ASK_schematic.png)

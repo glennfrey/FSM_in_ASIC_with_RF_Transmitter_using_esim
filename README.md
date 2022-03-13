@@ -115,6 +115,7 @@ schematic after combining the digital blocks using Makerchip editor and tranlati
 
 
 ## Output Waveform
+As stated in the timer block the ASIC which includes the UART must send the data that is stored in the RAM in 5 minutes. Here it sent the 4 bytes of data that is stored in 32 bit RAM. And a signal 1 for idle state.
 ![](hackathonpics/ASIC_ngspice.png)
 
 ## DAC_Mixed_Block
@@ -127,26 +128,34 @@ schematic after combining the digital blocks using Makerchip editor and tranlati
 ![](hackathonpics2/comparator_waveform2.png)
 
 ## UpDownCOUNTER_Mixed_Block
+This is the heart of Counter-Type ADC the Up-Down Counter 
 ![](hackathonpics/updownCounter_makerchip.png)
 ![](hackathonpics/updownCounter_waveform.png)
-here the counter try to copy the waveform of the input
+Here the counter try to chase the value of the input in steps of 5mV. 
 ![](hackathonpics2/updowncounrter_waveform.png)
 ![](hackathonpics2/updowncounrter_waveform2.png)
 
 ## ADC_Mixed_Block
+This is a Counter-Type ADC. It is composed of DAC, comparator and Up-Down Counter.
 ![](adc_schematic.png)
+Here the counter try to chase the value of the input in steps of 5mV. 
 ![](hackathonpics2/adc_waveform.png)
+Here the counter counts up or down in relation to comparator output. 
 ![](hackathonpics2/adc_waveform2.png)
 
 ## Amplitude_Shift_Keying_ASK_Analog_Block
+I change the model of the transistor to pmos and nmos 180nm as this is part of the ASIC using 180 nm technology
 ![](hackathonpics2/ASK_schematic.png)
 ![](hackathonpics2/ASIC_schematic2.png)
 
 ## ASK_Waveform
+The waveform of amplitude shift keying as indicated in Literature Survey!!!
 ![](hackathonpics2/ASK_waveform.png)
+closer look of the waveform
 ![](hackathonpics2/ASK_waveform2.png)
 
 ## Final Schematic
+The Final ASIC is compoed of MIXED block, DIGITAL Block and ANALOG BLOCK.
 ![](hackathonpics2/ASIC_Final_schematic.png)
 
 ## Netlist

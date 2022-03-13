@@ -1,0 +1,38 @@
+* C:\Users\glenn\eSim-Workspace\dac\dac.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 3/13/2022 8:04:52 PM
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+X1  d0 d1 d2 d3 d4 d5 d6 d7 GND GND A0 10bitDAC		
+U9  A0 plot_v1		
+v8  d0 GND pulse		
+v7  d1 GND pulse		
+v6  d2 GND pulse		
+v5  d3 GND pulse		
+v4  d4 GND pulse		
+v3  d5 GND pulse		
+v2  d6 GND pulse		
+v1  d7 GND pulse		
+U1  d7 plot_v1		
+U2  d6 plot_v1		
+U3  d5 plot_v1		
+U4  d4 plot_v1		
+U5  d3 plot_v1		
+U6  d2 plot_v1		
+U7  d1 plot_v1		
+U8  d0 plot_v1		
+X2  ? in A0 Net-_X2-Pad4_ ? C0 Net-_X2-Pad7_ ? lm_741		
+v9  GND in sine		
+U10  C0 plot_v1		
+v10  Net-_X2-Pad7_ GND DC		
+U11  in plot_v1		
+v11  GND Net-_X2-Pad4_ DC		
+U13  Net-_U12-Pad3_ Net-_U12-Pad4_ Net-_U13-Pad3_ d_and		
+U12  C0 d0 Net-_U12-Pad3_ Net-_U12-Pad4_ adc_bridge_2		
+U14  Net-_U13-Pad3_ AndDout dac_bridge_1		
+U15  AndDout plot_v1		
+
+.end

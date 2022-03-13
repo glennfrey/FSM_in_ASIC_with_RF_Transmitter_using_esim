@@ -1,0 +1,28 @@
+* C:\Users\glenn\eSim-Workspace\glenn_ASIC_digitalpart\glenn_ASIC_digitalpart.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 3/12/2022 5:42:59 PM
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+v1  Net-_U3-Pad6_ GND DC		
+v2  clk GND pulse		
+U6  GND GND GND GND GND Net-_U3-Pad6_ GND Net-_U3-Pad6_ Net-_U1-Pad25_ Net-_U1-Pad26_ Net-_U1-Pad27_ Net-_U1-Pad28_ Net-_U1-Pad29_ Net-_U1-Pad30_ Net-_U1-Pad31_ Net-_U1-Pad32_ adc_bridge_8		
+U4  GND GND GND GND GND Net-_U3-Pad6_ GND Net-_U3-Pad6_ Net-_U1-Pad9_ Net-_U1-Pad10_ Net-_U1-Pad11_ Net-_U1-Pad12_ Net-_U1-Pad13_ Net-_U1-Pad14_ Net-_U1-Pad15_ Net-_U1-Pad16_ adc_bridge_8		
+U3  GND GND GND GND GND Net-_U3-Pad6_ GND Net-_U3-Pad6_ Net-_U1-Pad1_ Net-_U1-Pad2_ Net-_U1-Pad3_ Net-_U1-Pad4_ Net-_U1-Pad5_ Net-_U1-Pad6_ Net-_U1-Pad7_ Net-_U1-Pad8_ adc_bridge_8		
+U8  clk clk Net-_U3-Pad6_ Net-_U1-Pad41_ Net-_U1-Pad42_ Net-_U1-Pad43_ adc_bridge_3		
+U9  Net-_U1-Pad52_ data dac_bridge_1		
+U5  GND GND GND GND GND Net-_U3-Pad6_ GND Net-_U3-Pad6_ Net-_U1-Pad17_ Net-_U1-Pad18_ Net-_U1-Pad19_ Net-_U1-Pad20_ Net-_U1-Pad21_ Net-_U1-Pad22_ Net-_U1-Pad23_ Net-_U1-Pad24_ adc_bridge_8		
+U1  Net-_U1-Pad1_ Net-_U1-Pad2_ Net-_U1-Pad3_ Net-_U1-Pad4_ Net-_U1-Pad5_ Net-_U1-Pad6_ Net-_U1-Pad7_ Net-_U1-Pad8_ Net-_U1-Pad9_ Net-_U1-Pad10_ Net-_U1-Pad11_ Net-_U1-Pad12_ Net-_U1-Pad13_ Net-_U1-Pad14_ Net-_U1-Pad15_ Net-_U1-Pad16_ Net-_U1-Pad17_ Net-_U1-Pad18_ Net-_U1-Pad19_ Net-_U1-Pad20_ Net-_U1-Pad21_ Net-_U1-Pad22_ Net-_U1-Pad23_ Net-_U1-Pad24_ Net-_U1-Pad25_ Net-_U1-Pad26_ Net-_U1-Pad27_ Net-_U1-Pad28_ Net-_U1-Pad29_ Net-_U1-Pad30_ Net-_U1-Pad31_ Net-_U1-Pad32_ Net-_U1-Pad33_ Net-_U1-Pad34_ Net-_U1-Pad35_ Net-_U1-Pad36_ Net-_U1-Pad37_ Net-_U1-Pad38_ Net-_U1-Pad39_ Net-_U1-Pad40_ Net-_U1-Pad41_ Net-_U1-Pad42_ Net-_U1-Pad43_ ? ? ? ? ? ? ? ? Net-_U1-Pad52_ glenn_asic		
+U2  clk plot_v1		
+U10  data plot_v1		
+U11  TX plot_v1		
+v3  TX Net-_M1-Pad3_ sine		
+M1  Net-_M1-Pad1_ data Net-_M1-Pad3_ Net-_M1-Pad4_ mosfet_n		
+M2  Net-_M1-Pad1_ data TX Net-_M2-Pad4_ mosfet_p		
+U7  Net-_U3-Pad6_ Net-_U3-Pad6_ Net-_U3-Pad6_ Net-_U3-Pad6_ Net-_U3-Pad6_ Net-_U3-Pad6_ Net-_U3-Pad6_ Net-_U3-Pad6_ Net-_U1-Pad33_ Net-_U1-Pad34_ Net-_U1-Pad35_ Net-_U1-Pad36_ Net-_U1-Pad37_ Net-_U1-Pad38_ Net-_U1-Pad39_ Net-_U1-Pad40_ adc_bridge_8		
+v4  Net-_M2-Pad4_ GND DC		
+v5  GND Net-_M1-Pad4_ DC		
+
+.end

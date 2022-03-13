@@ -64,19 +64,26 @@ rain sensor, light sensor, and moisture sensor. Each of which has its own interf
 
 ## RAM128X32_Digital_Block
 ![](hackathonpics/RAM_makerchip.png)
+Looking at the waveform the data are not stored as the write enable signal is off state. 
 ![](hackathonpics/RAM_makerchip_we_0.png)
+Here the signal are stored as write enable is in logic 1.
 ![](hackathonpics/RAM_makerchip_we_1.png)
+Output q outputs the data in the next rotation of address bits.
 ![](hackathonpics/RAM_makerchip_we_1_output.png)
 
 ## 3bitDecoder_Digital_Block
 ![](hackathonpics/8bitDecoder_makerchip.png)
 ![](hackathonpics/8bitDecoder_tb.png)
+To create a testbench for all possible input I chose this pattern as shown. It is evident that there is no output when the enable bit is off.
 ![](hackathonpics/8bitDecoder_ngspice_waveform.png)
 
 ## UART_Digital_Block
 ![](hackathonpics/UART_makerchip.png)
+Here looking at the reg_tx_data stores 08 hexadecimal number or 1000 in digital format. Thus the output waveform in out_tx_serial should be 0 for start bit then followed by 0001 because the least significant bit is transmitted first. After 8 bits of data is transmitted a stop bit of 1 is sent then transmission for the stored byte is completed. Also note that the transmission accours at reg_Main_state at state 2 which is the transmission state. for more info you can look at the UART.v files.
 ![](hackathonpics/UART_waveform1.png)
+Here is 14 which is 10100 in binary form. 
 ![](hackathonpics/UART_waveform2.png)
+Here is 20 which is 100000 in binary format.
 ![](hackathonpics/UART_waveform3.png)
 
 ## PISO_Digital_Block
@@ -84,19 +91,25 @@ rain sensor, light sensor, and moisture sensor. Each of which has its own interf
 
 ## TIMER_Digital_Block
 ![](hackathonpics/TIMER_makerchip.png)
+The timer must output after 1 minute as shown here. This will be use to inform RAM to store sensor data every minute.
 ![](hackathonpics/TIMER_waveform.png)
+The timer must output after 5 minutes as shown here. This will be use to inform UART to start transmission
 ![](hackathonpics/TIMER_waveform2.png)
 
 ## ASIC_Digital_Block
+checking fsm and decoder block
 ![](hackathonpics/ASIC_makerchip_fsm_decoder.png)
 ![](hackathonpics/ASIC_makerchip_fsm_decoder2.png)
+checking fsm, decoder, ram and timer
 ![](hackathonpics/ASIC_makerchip_fsm_decoder_ram_timer.png)
 ![](hackathonpics/ASIC_waveform_fsm_decoder_ram_timer.png)
 ![](hackathonpics/ASIC_waveform_fsm_decoder_ram_timer2.png)
+checking fsm, decoder, ram, timer and UART
 ![](hackathonpics/ASIC_maker_fsm_decoder_ram_timer_uart.png)
 ![](hackathonpics/ASIC_waveform_fsm_decoder_ram_timer_uart.png)
 ![](hackathonpics/ASIC_waveform2_fsm_decoder_ram_timer_uart.png)
 ![](hackathonpics/ASIC_waveform3_fsm_decoder_ram_timer_uart.png)
+schematic after combining the digital blocks using Makerchip editor and tranlating to schematic using NgVeri.
 ![](hackathonpics/ASIC_schematic.png)
 ![](hackathonpics/ASIC_finalschem.png)
 
@@ -116,6 +129,7 @@ rain sensor, light sensor, and moisture sensor. Each of which has its own interf
 ## UpDownCOUNTER_Mixed_Block
 ![](hackathonpics/updownCounter_makerchip.png)
 ![](hackathonpics/updownCounter_waveform.png)
+here the counter try to copy the waveform of the input
 ![](hackathonpics2/updowncounrter_waveform.png)
 ![](hackathonpics2/updowncounrter_waveform2.png)
 

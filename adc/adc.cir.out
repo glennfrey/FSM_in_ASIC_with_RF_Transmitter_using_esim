@@ -1,0 +1,44 @@
+* c:\users\glenn\esim-workspace\adc\adc.cir
+
+.include 10bitDAC.sub
+.include lm_741.sub
+x1 count0 count1 count2 count3 count4 count5 count6 count7 gnd gnd a0 10bitDAC
+* u9  a0 plot_v1
+v8  clk gnd pulse(0 2 0.1m 0.1m 0.1m 0.5 1)
+* u8  clk plot_v1
+x2 ? a0 in net-_x2-pad4_ ? c0 net-_x2-pad7_ ? lm_741
+v9  gnd in sine(-0.6375 0.6375 .005 0 0)
+* u11  c0 plot_v1
+v10 net-_x2-pad7_ gnd  dc 2
+* u10  in plot_v1
+v11 gnd net-_x2-pad4_  dc 2
+* u14  c0 clk gnd net-_u12-pad3_ net-_u12-pad1_ net-_u12-pad2_ adc_bridge_3
+* u16  net-_u12-pad4_ net-_u12-pad5_ net-_u12-pad6_ net-_u12-pad7_ net-_u12-pad8_ net-_u12-pad9_ net-_u12-pad10_ net-_u12-pad11_ count7 count6 count5 count4 count3 count2 count1 count0 dac_bridge_8
+* u18  count7 plot_v1
+* u20  count6 plot_v1
+* u22  count5 plot_v1
+* u24  count4 plot_v1
+* u17  count3 plot_v1
+* u19  count2 plot_v1
+* u21  count1 plot_v1
+* u23  count0 plot_v1
+* u12  net-_u12-pad1_ net-_u12-pad2_ net-_u12-pad3_ net-_u12-pad4_ net-_u12-pad5_ net-_u12-pad6_ net-_u12-pad7_ net-_u12-pad8_ net-_u12-pad9_ net-_u12-pad10_ net-_u12-pad11_ glenn_updowncounter
+a1 [c0 clk gnd ] [net-_u12-pad3_ net-_u12-pad1_ net-_u12-pad2_ ] u14
+a2 [net-_u12-pad4_ net-_u12-pad5_ net-_u12-pad6_ net-_u12-pad7_ net-_u12-pad8_ net-_u12-pad9_ net-_u12-pad10_ net-_u12-pad11_ ] [count7 count6 count5 count4 count3 count2 count1 count0 ] u16
+a3 [net-_u12-pad1_ ] [net-_u12-pad2_ ] [net-_u12-pad3_ ] [net-_u12-pad4_ net-_u12-pad5_ net-_u12-pad6_ net-_u12-pad7_ net-_u12-pad8_ net-_u12-pad9_ net-_u12-pad10_ net-_u12-pad11_ ] u12
+* Schematic Name:                             adc_bridge_3, NgSpice Name: adc_bridge
+.model u14 adc_bridge(in_low=0 in_high=2.0 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             dac_bridge_8, NgSpice Name: dac_bridge
+.model u16 dac_bridge(out_low=0.0 out_high=5.0 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+* Schematic Name:                             glenn_updowncounter, NgSpice Name: glenn_updowncounter
+.model u12 glenn_updowncounter(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+.tran .1e-00 500e-00 100e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(c0) v(a0) v(count7)+5 v(count6)+10 v(count5)+15 v(count4)+20 v(count3)+25 v(count2)+30 v(count1)+35 v(count0)+40
+.endc
+.end

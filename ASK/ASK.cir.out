@@ -1,0 +1,40 @@
+* c:\users\glenn\esim-workspace\ask\ask.cir
+
+.include PMOS-180nm.lib
+.include NMOS-180nm.lib
+* u2  tx plot_v1
+v2  tx net-_m1-pad3_ sine(0 10 1000 0 0)
+m1 net-_m1-pad1_ data net-_m1-pad3_ net-_m1-pad4_ CMOSN W=100u L=100u M=1
+v3 net-_m2-pad4_ gnd  dc 9.5
+m2 net-_m1-pad1_ data tx net-_m2-pad4_ CMOSP W=100u L=100u M=1
+v4 gnd net-_m1-pad4_  dc 9.5
+* u1  net-_u1-pad1_ net-_u1-pad2_ net-_u1-pad3_ net-_u1-pad4_ net-_u1-pad5_ net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ net-_u1-pad9_ net-_u1-pad10_ ? ? net-_u1-pad13_ glenn_uart
+* u5  net-_u1-pad13_ data dac_bridge_1
+* u4  gnd gnd gnd gnd gnd gnd gnd gnd net-_u1-pad3_ net-_u1-pad4_ net-_u1-pad5_ net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ net-_u1-pad9_ net-_u1-pad10_ adc_bridge_8
+v5 net-_u3-pad2_ gnd  dc 2
+v1  clk gnd pulse(0 2 0 0 0 10ms 20ms)
+* u6  data plot_v1
+* u3  clk net-_u3-pad2_ net-_u1-pad1_ net-_u1-pad2_ adc_bridge_2
+* u7  clk plot_v1
+a1 [net-_u1-pad1_ ] [net-_u1-pad2_ ] [net-_u1-pad3_ net-_u1-pad4_ net-_u1-pad5_ net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ net-_u1-pad9_ net-_u1-pad10_ ] [? ] [? ] [net-_u1-pad13_ ] u1
+a2 [net-_u1-pad13_ ] [data ] u5
+a3 [gnd gnd gnd gnd gnd gnd gnd gnd ] [net-_u1-pad3_ net-_u1-pad4_ net-_u1-pad5_ net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ net-_u1-pad9_ net-_u1-pad10_ ] u4
+a4 [clk net-_u3-pad2_ ] [net-_u1-pad1_ net-_u1-pad2_ ] u3
+* Schematic Name:                             glenn_uart, NgSpice Name: glenn_uart
+.model u1 glenn_uart(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             dac_bridge_1, NgSpice Name: dac_bridge
+.model u5 dac_bridge(out_low=-10 out_high=10 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+* Schematic Name:                             adc_bridge_8, NgSpice Name: adc_bridge
+.model u4 adc_bridge(in_low=0 in_high=2.0 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             adc_bridge_2, NgSpice Name: adc_bridge
+.model u3 adc_bridge(in_low=0 in_high=2.0 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+.tran 10e-06 1000e-03 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(tx) v(data)+30 v(clk)+60
+.endc
+.end

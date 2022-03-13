@@ -1,0 +1,40 @@
+* c:\users\glenn\esim-workspace\glenn_updowncounter\glenn_updowncounter.cir
+
+.include 10bitDAC.sub
+.include 3_and.sub
+.include lm_741.sub
+* u1  net-_u1-pad1_ net-_u1-pad2_ net-_u1-pad3_ net-_u1-pad4_ net-_u1-pad5_ net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ net-_u1-pad9_ net-_u1-pad10_ net-_u1-pad11_ glenn_updowncounter
+x1 ? in net-_u7-pad~_ gnd ? updown net-_u5-pad2_ ? lm_741
+x3 net-_u6-pad16_ net-_u6-pad15_ net-_u6-pad14_ net-_u6-pad13_ net-_u6-pad12_ net-_u6-pad11_ net-_u6-pad10_ net-_u6-pad9_ gnd gnd net-_u7-pad~_ 10bitDAC
+x2 net-_u1-pad2_ net-_u5-pad4_ net-_u1-pad1_ net-_u1-pad3_ 3_and
+* u5  updown net-_u5-pad2_ clk net-_u5-pad4_ net-_u1-pad2_ net-_u1-pad1_ adc_bridge_3
+* u6  net-_u1-pad4_ net-_u1-pad5_ net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ net-_u1-pad9_ net-_u1-pad10_ net-_u1-pad11_ net-_u6-pad9_ net-_u6-pad10_ net-_u6-pad11_ net-_u6-pad12_ net-_u6-pad13_ net-_u6-pad14_ net-_u6-pad15_ net-_u6-pad16_ dac_bridge_8
+v1  in gnd sine(0 5 .5 0 0)
+* u2  in plot_v1
+* u3  clk plot_v1
+* u4  updown plot_v1
+* u7  net-_u7-pad~_ plot_v1
+v2 net-_u5-pad2_ gnd  dc 5
+v3  clk gnd pulse(0 5 0 0 0 0.5 1)
+a1 [net-_u1-pad1_ ] [net-_u1-pad2_ ] [net-_u1-pad3_ ] [net-_u1-pad4_ net-_u1-pad5_ net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ net-_u1-pad9_ net-_u1-pad10_ net-_u1-pad11_ ] u1
+a2 [updown net-_u5-pad2_ clk ] [net-_u5-pad4_ net-_u1-pad2_ net-_u1-pad1_ ] u5
+a3 [net-_u1-pad4_ net-_u1-pad5_ net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ net-_u1-pad9_ net-_u1-pad10_ net-_u1-pad11_ ] [net-_u6-pad9_ net-_u6-pad10_ net-_u6-pad11_ net-_u6-pad12_ net-_u6-pad13_ net-_u6-pad14_ net-_u6-pad15_ net-_u6-pad16_ ] u6
+* Schematic Name:                             glenn_updowncounter, NgSpice Name: glenn_updowncounter
+.model u1 glenn_updowncounter(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             adc_bridge_3, NgSpice Name: adc_bridge
+.model u5 adc_bridge(in_low=1.0 in_high=2.0 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             dac_bridge_8, NgSpice Name: dac_bridge
+.model u6 dac_bridge(out_low=0.0 out_high=5.0 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+.tran .1e-00 10e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(in)
+plot v(clk)
+plot v(updown)
+plot v(net-_u7-pad~_)
+.endc
+.end

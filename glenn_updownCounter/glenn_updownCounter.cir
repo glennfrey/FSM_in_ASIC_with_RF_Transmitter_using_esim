@@ -1,0 +1,23 @@
+* C:\Users\glenn\eSim-Workspace\glenn_updownCounter\glenn_updownCounter.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 3/13/2022 5:59:32 PM
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+U1  Net-_U1-Pad1_ Net-_U1-Pad2_ Net-_U1-Pad3_ Net-_U1-Pad4_ Net-_U1-Pad5_ Net-_U1-Pad6_ Net-_U1-Pad7_ Net-_U1-Pad8_ Net-_U1-Pad9_ Net-_U1-Pad10_ Net-_U1-Pad11_ glenn_updowncounter		
+X1  ? In Net-_U7-Pad~_ GND ? UpDown Net-_U5-Pad2_ ? lm_741		
+X3  Net-_U6-Pad16_ Net-_U6-Pad15_ Net-_U6-Pad14_ Net-_U6-Pad13_ Net-_U6-Pad12_ Net-_U6-Pad11_ Net-_U6-Pad10_ Net-_U6-Pad9_ GND GND Net-_U7-Pad~_ 10bitDAC		
+X2  Net-_U1-Pad2_ Net-_U5-Pad4_ Net-_U1-Pad1_ Net-_U1-Pad3_ 3_and		
+U5  UpDown Net-_U5-Pad2_ clk Net-_U5-Pad4_ Net-_U1-Pad2_ Net-_U1-Pad1_ adc_bridge_3		
+U6  Net-_U1-Pad4_ Net-_U1-Pad5_ Net-_U1-Pad6_ Net-_U1-Pad7_ Net-_U1-Pad8_ Net-_U1-Pad9_ Net-_U1-Pad10_ Net-_U1-Pad11_ Net-_U6-Pad9_ Net-_U6-Pad10_ Net-_U6-Pad11_ Net-_U6-Pad12_ Net-_U6-Pad13_ Net-_U6-Pad14_ Net-_U6-Pad15_ Net-_U6-Pad16_ dac_bridge_8		
+v1  In GND sine		
+U2  In plot_v1		
+U3  clk plot_v1		
+U4  UpDown plot_v1		
+U7  Net-_U7-Pad~_ plot_v1		
+v2  Net-_U5-Pad2_ GND DC		
+v3  clk GND pulse		
+
+.end

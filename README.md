@@ -1,4 +1,5 @@
 # FSM in ASIC with RF Transmitter using esim
+##### MIXED SIGNAL HACKATHON
   * [Abstract](#abstract)
   * [Reference Circuit Details](#reference-circuit-details)
   * [Reference Circuit Diagram](#reference-circuit-diagram)
@@ -25,10 +26,6 @@
   * [Author](#author)
   * [Acknowledgement](#acknowlegement)
   * [References](#references)
-
-
-
-
 
 ## Abstract
 Finite State Machine (FSM) in ApplicationSpecific Integrated Circuit (ASIC) is highly efficient in terms of computation and power. In this project I want to implementSmart Garden using FSM written in Verilog with wireless interface for remote monitoring. The circuit will be composed ofSystem on a chip, opto-relay, sensors, flash, timer and display. The emphasis of the project is to design a mixed signal circuit. That is the FSM for design a digital circuit written in Verilog and Rf transmitter for the analog circuit.

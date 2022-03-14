@@ -97,14 +97,14 @@ The timer must output after 5 minutes as shown here. This will be use to inform 
 ![](hackathonpics/TIMER_waveform2.png)
 
 ## ASIC_Digital_Block
-checking fsm and decoder block
+checking fsm and decoder block after integration/instantiation in ASIC block.
 ![](hackathonpics/ASIC_makerchip_fsm_decoder.png)
 ![](hackathonpics/ASIC_makerchip_fsm_decoder2.png)
-checking fsm, decoder, ram and timer
+checking fsm, decoder, ram and timer after integration/instantiation in ASIC block.
 ![](hackathonpics/ASIC_makerchip_fsm_decoder_ram_timer.png)
 ![](hackathonpics/ASIC_waveform_fsm_decoder_ram_timer.png)
 ![](hackathonpics/ASIC_waveform_fsm_decoder_ram_timer2.png)
-checking fsm, decoder, ram, timer and UART
+checking fsm, decoder, ram, timer and UART after integration/instantiation in ASIC block
 ![](hackathonpics/ASIC_maker_fsm_decoder_ram_timer_uart.png)
 ![](hackathonpics/ASIC_waveform_fsm_decoder_ram_timer_uart.png)
 ![](hackathonpics/ASIC_waveform2_fsm_decoder_ram_timer_uart.png)
@@ -163,12 +163,10 @@ The Final ASIC is compoed of MIXED block, DIGITAL Block and ANALOG BLOCK.
 ## Author
 Glenn Frey Olamit , self.
 ## Acknowledgement
-1. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
-2. Chinmay panda, IIT Hyderabad
-3. Sameer Durgoji, NIT Karnataka
-4. Steve Hoover, Founder Redwood EDA, LLC - redwoodeda.com
-5. [esim Team/Company](https://hackathon.fossee.in/esim/home)
-6. https://hackathon.fossee.in/esim/home
+1. FOSSEE,IIT Bombay
+2. Steve Hoover, Founder, Redwood EDA
+3. Kunal Ghosh, Co-Founder, VSD Corp. Pvt. Ltd. - kunalghosh@gmail.com
+4. Sumanto Kar, eSim Team, FOSSEE
 ## References
 Generation of ASK signal using multisim software | Amplitude shift
 keying | Acts of Facts..

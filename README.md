@@ -1,5 +1,5 @@
 # FSM in ASIC with RF Transmitter using esim
-##### MIXED SIGNAL HACKATHON
+### MIXED SIGNAL HACKATHON
   * [Abstract](#abstract)
   * [Reference Circuit Details](#reference-circuit-details)
   * [Reference Circuit Diagram](#reference-circuit-diagram)
@@ -56,10 +56,10 @@ rain sensor, light sensor, and moisture sensor. Each of which has its own interf
 # Simulation in esim
 
 
-## FSM_Digital_Block
+## FSM Digital Block
 ![](hackathonpics/FSM_makerchip.png)
 
-## RAM128X32_Digital_Block
+## RAM128X32 Digital Block
 ![](hackathonpics/RAM_makerchip.png)
 Looking at the waveform the data are not stored as the write enable signal is off state. 
 ![](hackathonpics/RAM_makerchip_we_0.png)
@@ -68,13 +68,13 @@ Here the signal are stored as write enable is in logic 1.
 Output q outputs the data in the next rotation of address bits.
 ![](hackathonpics/RAM_makerchip_we_1_output.png)
 
-## 3bitDecoder_Digital_Block
+## 3bitDecoder Digital Block
 ![](hackathonpics/8bitDecoder_makerchip.png)
 ![](hackathonpics/8bitDecoder_tb.png)
 To create a testbench for all possible input I chose this pattern as shown. It is evident that there is no output when the enable bit is off.
 ![](hackathonpics/8bitDecoder_ngspice_waveform.png)
 
-## UART_Digital_Block
+## UART Digital Block
 ![](hackathonpics/UART_makerchip.png)
 Here looking at the reg_tx_data stores 08 hexadecimal number or 1000 in digital format. Thus the output waveform in out_tx_serial should be 0 for start bit then followed by 0001 because the least significant bit is transmitted first. After 8 bits of data is transmitted a stop bit of 1 is sent then transmission for the stored byte is completed. Also note that the transmission accours at reg_Main_state at state 2 which is the transmission state. for more info you can look at the UART.v files.
 ![](hackathonpics/UART_waveform1.png)
@@ -83,17 +83,17 @@ Here is 14 which is 10100 in binary form.
 Here is 20 which is 100000 in binary format.
 ![](hackathonpics/UART_waveform3.png)
 
-## PISO_Digital_Block
+## PISO Digital Block
 ![](hackathonpics/PISO_makerchip.png)
 
-## TIMER_Digital_Block
+## TIMER Digital Block
 ![](hackathonpics/TIMER_makerchip.png)
 The timer must output after 1 minute as shown here. This will be use to inform RAM to store sensor data every minute.
 ![](hackathonpics/TIMER_waveform.png)
 The timer must output after 5 minutes as shown here. This will be use to inform UART to start transmission
 ![](hackathonpics/TIMER_waveform2.png)
 
-## ASIC_Digital_Block
+## ASIC Digital Block
 checking fsm and decoder block after integration/instantiation in ASIC block.
 ![](hackathonpics/ASIC_makerchip_fsm_decoder.png)
 ![](hackathonpics/ASIC_makerchip_fsm_decoder2.png)
@@ -115,16 +115,16 @@ schematic after combining the digital blocks using Makerchip editor and tranlati
 As stated in the timer block the ASIC which includes the UART must send the data that is stored in the RAM in 5 minutes. Here it sent the 4 bytes of data that is stored in 32 bit RAM. And a signal 1 for idle state.
 ![](hackathonpics/ASIC_ngspice.png)
 
-## DAC_Mixed_Block
+## DAC Mixed Block
 ![](hackathonpics2/dac_shematic.png)
 ![](hackathonpics2/dac_waveform.png)
 
-## Comparator_Mixed_Block
+## Comparator Mixed Block
 ![](hackathonpics2/comparator_schematic.png)
 ![](hackathonpics2/comparator_waveform.png)
 ![](hackathonpics2/comparator_waveform2.png)
 
-## UpDownCOUNTER_Mixed_Block
+## UpDownCOUNTER Mixed Block
 This is the heart of Counter-Type ADC the Up-Down Counter 
 ![](hackathonpics/updownCounter_makerchip.png)
 ![](hackathonpics/updownCounter_waveform.png)
@@ -132,7 +132,7 @@ Here the counter try to chase the value of the input in steps of 5mV.
 ![](hackathonpics2/updowncounrter_waveform.png)
 ![](hackathonpics2/updowncounrter_waveform2.png)
 
-## ADC_Mixed_Block
+## ADC Mixed Block
 This is a Counter-Type ADC. It is composed of DAC, comparator and Up-Down Counter.
 ![](adc_schematic.png)
 Here the counter try to chase the value of the input in steps of 5mV. 
@@ -140,12 +140,12 @@ Here the counter try to chase the value of the input in steps of 5mV.
 Here the counter counts up or down in relation to comparator output. 
 ![](hackathonpics2/adc_waveform2.png)
 
-## Amplitude_Shift_Keying_ASK_Analog_Block
+## Amplitude Shift Keying ASK Analog Block
 I change the model of the transistor to pmos and nmos 180nm as this is part of the ASIC using 180 nm technology
 ![](hackathonpics2/ASK_schematic.png)
 ![](hackathonpics2/ASIC_schematic2.png)
 
-## ASK_Waveform
+## ASK Waveform
 The waveform of amplitude shift keying as indicated in Literature Survey!!!
 ![](hackathonpics2/ASK_waveform.png)
 closer look of the waveform

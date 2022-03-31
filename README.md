@@ -1,4 +1,4 @@
-# FSM in ASIC with RF Transmitter using esim
+# MIXED-SIGNAL MARATHON
 ### MIXED SIGNAL HACKATHON
   * [Abstract](#abstract)
   * [Reference Circuit Details](#reference-circuit-details)

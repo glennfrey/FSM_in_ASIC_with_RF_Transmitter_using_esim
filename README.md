@@ -1,5 +1,5 @@
 # MIXED-SIGNAL MARATHON
-### MIXED SIGNAL HACKATHON
+### MIXED SIGNAL MARATHON
   * [Abstract](#abstract)
   * [Reference Circuit Details](#reference-circuit-details)
   * [Reference Circuit Diagram](#reference-circuit-diagram)

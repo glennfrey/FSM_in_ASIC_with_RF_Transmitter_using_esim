@@ -1,4 +1,4 @@
-# MIXED-SIGNAL MARATHON
+# FSM in ASIC with RF Transmitter using eSim
 ### MIXED SIGNAL MARATHON
   * [Abstract](#abstract)
   * [Reference Circuit Details](#reference-circuit-details)
